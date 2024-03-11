@@ -1,6 +1,10 @@
 import qrcode
+import sys
 
-input_URL = "https://www.google.com/"
+try:
+    input_URL = sys.argv[2]
+except:
+    input_URL = input("whats the url?")
 
 qr = qrcode.QRCode(
     version=1,
